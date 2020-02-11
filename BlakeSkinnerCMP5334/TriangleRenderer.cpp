@@ -3,6 +3,7 @@
 #include "Utilcpp.cpp"
 //Got to slide 12 - 11/02/2020
 //vertices
+//test push
 GLfloat vertexData[] =
 {
 	-0.5f, -0.5f, -1.0f,
