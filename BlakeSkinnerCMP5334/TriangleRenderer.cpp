@@ -1,19 +1,20 @@
 #include "pch.h"
 #include "TriangleRenderer.h"
-
+#include "Utilcpp.cpp"
+//Got to slide 12 - 11/02/2020
 //vertices
 GLfloat vertexData[] =
 {
-	-0.5f, -0.5f,
-	0.5f, -0.5f,
-	0.0f, 0.5f
+	-0.5f, -0.5f, -1.0f,
+	0.5f, -0.5f, -1.0f,
+	0.0f, 0.5f, -1.0f
 };
 
 //indices 
 GLuint indexData[] = { 0,1,2 };
 
-TriangleRenderer::TriangleRenderer() {
-
+TriangleRenderer::TriangleRenderer(Camera* camera) {
+	this->camera = camera;
 }
 
 TriangleRenderer::~TriangleRenderer() {
@@ -21,15 +22,24 @@ TriangleRenderer::~TriangleRenderer() {
 }
 
 void TriangleRenderer::init() {
+	Util util;
 	//A program is a combination of a vertext and a fragment shader.
 	programId = glCreateProgram();
 	//First the vertex shader source code needs to be loaded, compiled and then attached to the program
 	GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
 	//This is the vertex shader program source code.This can be modified to load a file
 	//later turotials will look at loading shaders from a file.
-	const GLchar* vertexShaderSource[] = {
-		"#version 140\nin vec2 vertexPos2D;"
-		"void main() { gl_Position = vec4( vertexPos2D.x, vertexPos2D.y, 0, 1);}"
+	//const GLchar* vertexShaderSource[] = {
+	//	"#version 140\nin vec2 vertexPos2D;"
+	//	"void main() { gl_Position = vec4( vertexPos2D.x, vertexPos2D.y, 0, 1);}"
+	//11/02/2020
+
+	string fileText = util.readFile("vertexshader.shader");
+	const GLchar * shaderSource = fileText.c_str();
+
+	glShaderSource(vertexShader, 1, (const GLchar**)&shaderSource, NULL);
+	//sglShaderSource(vertexShader, 1, vertexShaderSource, Null);
+	glCompileShader(vertexShader);
 	};
 
 	glShaderSource(vertexShader, 1, vertexShaderSource, NULL);

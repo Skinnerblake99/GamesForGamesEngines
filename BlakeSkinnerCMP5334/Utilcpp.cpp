@@ -9,12 +9,32 @@
 
 using namespace std;
 
-namespace Util {
+struct Util {
 	string readFile(string file) {
 		string fileString;
 		ifstream fStream(file.c_str());
 		fileString.assign((std::istreambuf_iterator<char>(fStream)), std::istreambuf_iterator<char>());
-		return fileString
+		return fileString;
 	}
-}
-//completed slide 5
+
+
+
+
+	void printShaderLog(GLuint shader)
+	{
+		//Shader log length
+		int infoLogLength = 0;
+		int maxLength = 0;
+
+		//get length of error then allocate to string
+		glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &maxLength);
+		char* infoLog = new char[maxLength];
+		glGetShaderInfoLog(shader, maxLength, &infoLogLength, infoLog);
+
+		if (infoLogLength > 0)
+		{
+			printf("%s\n", infoLog);
+		}
+		delete[] infoLog;
+	}
+};
