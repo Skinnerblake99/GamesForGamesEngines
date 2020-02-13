@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "TriangleRenderer.h"
 #include "Utilcpp.cpp"
-#include "Camera.h"
+//#include "Camera.h"
 GLfloat vertexData[] =
 {
 	-0.5f, -0.5f, -1.0f,
@@ -41,7 +41,7 @@ void TriangleRenderer::init() {
 	glCompileShader(vertexShader);
 
 
-	glShaderSource(vertexShader, 1, vertexShaderSource, NULL);
+	//glShaderSource(vertexShader, 1, vertexShaderSource, NULL);
 	glCompileShader(vertexShader);
 	GLint vShaderCompiled = GL_FALSE;
 	glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &vShaderCompiled);
@@ -55,7 +55,7 @@ void TriangleRenderer::init() {
 	glAttachShader(programId, vertexShader);
 
 	//Next, the fragment shader source code needs to be loaded, compiled and then attached to the program
-	GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+	//GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
 	//Commented out 13/02/2020
 	//This is the fragment shader program source cide, This can be modified to be loaded from a file
 	//const GLchar* fragmentShaderSource[] = 
@@ -79,7 +79,7 @@ void TriangleRenderer::init() {
 	}
 
     //Set fragment source
-	glShaderSource(fragmentShader, 1, fragmentShaderSource, NULL);
+	//glShaderSource(fragmentShader, 1, fragmentShaderSource, NULL);
     //Compile fragment source
 	glCompileShader(fragmentShader);
 	//Check fragment shader for Errors

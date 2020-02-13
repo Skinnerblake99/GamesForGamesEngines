@@ -20,7 +20,7 @@ private:
 
 	GLuint programId = 0;
 	GLint vertexPositionLocation = -1;
-
+	Camera * camera;
 	GLuint vertexBufferObject =0;
 	GLuint indexBufferObject = 0;
 	GLuint modelMatrixLocation = -1;

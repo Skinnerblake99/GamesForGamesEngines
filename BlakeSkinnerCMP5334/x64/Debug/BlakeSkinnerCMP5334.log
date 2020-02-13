@@ -1,35 +1,40 @@
-﻿  pch.cpp
-  BlakeSkinnerCMP5334.cpp
-  GameLoop.cpp
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(10): error C2144: syntax error: 'float' should be preceded by ';'
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(27): error C2065: 'viewMatrix': undeclared identifier
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(27): error C2065: 'position': undeclared identifier
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(27): error C2065: 'lookAt': undeclared identifier
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(32): error C2065: 'viewMatrix': undeclared identifier
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(36): error C2065: 'projectionMatrix': undeclared identifier
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(40): error C2065: 'position': undeclared identifier
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(44): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(48): error C2065: 'lookAt': undeclared identifier
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(49): error C2143: syntax error: missing ';' before '}'
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(52): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+﻿  GameLoop.cpp
   TriangleRenderer.cpp
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(10): error C2144: syntax error: 'float' should be preceded by ';'
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(27): error C2065: 'viewMatrix': undeclared identifier
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(27): error C2065: 'position': undeclared identifier
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(27): error C2065: 'lookAt': undeclared identifier
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(32): error C2065: 'viewMatrix': undeclared identifier
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(36): error C2065: 'projectionMatrix': undeclared identifier
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(40): error C2065: 'position': undeclared identifier
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(44): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(48): error C2065: 'lookAt': undeclared identifier
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(49): error C2143: syntax error: missing ';' before '}'
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(52): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\trianglerenderer.cpp(18): error C2039: 'camera': is not a member of 'TriangleRenderer'
-  d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\trianglerenderer.h(9): note: see declaration of 'TriangleRenderer'
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\trianglerenderer.cpp(46): error C2065: 'vertexShaderSource': undeclared identifier
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\trianglerenderer.cpp(68): error C2374: 'fragmentShader': redefinition; multiple initialization
-  d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\trianglerenderer.cpp(60): note: see declaration of 'fragmentShader'
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\trianglerenderer.cpp(84): error C2065: 'fragmentShaderSource': undeclared identifier
-d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\trianglerenderer.cpp(150): error C2065: 'camera': undeclared identifier
-  Utilcpp.cpp
   Generating Code...
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_GetError referenced in function "public: void __cdecl GameLoop::init(void)" (?init@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_CreateWindow referenced in function "public: void __cdecl GameLoop::init(void)" (?init@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_DestroyWindow referenced in function "public: void __cdecl GameLoop::clean(void)" (?clean@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_GL_SetAttribute referenced in function "public: void __cdecl GameLoop::init(void)" (?init@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_GL_CreateContext referenced in function "public: void __cdecl GameLoop::init(void)" (?init@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_GL_SetSwapInterval referenced in function "public: void __cdecl GameLoop::init(void)" (?init@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_GL_SwapWindow referenced in function "public: void __cdecl GameLoop::draw(void)" (?draw@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_PollEvent referenced in function "public: bool __cdecl GameLoop::handleInput(void)" (?handleInput@GameLoop@@QEAA_NXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_Init referenced in function "public: void __cdecl GameLoop::init(void)" (?init@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_Quit referenced in function "public: void __cdecl GameLoop::clean(void)" (?clean@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol __imp_glewInit referenced in function "public: void __cdecl GameLoop::init(void)" (?init@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol __imp_glewGetErrorString referenced in function "public: void __cdecl GameLoop::init(void)" (?init@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2001: unresolved external symbol __imp_glewExperimental
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewBindBuffer
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewBufferData
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewGenBuffers
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewAttachShader
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewCompileShader
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewCreateProgram
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewCreateShader
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewDeleteProgram
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewDisableVertexAttribArray
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewEnableVertexAttribArray
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewGetAttribLocation
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewGetProgramiv
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewGetShaderInfoLog
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewGetShaderiv
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewGetUniformLocation
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewLinkProgram
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewShaderSource
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewUseProgram
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewVertexAttribPointer
+.\SDL2-2.0.8\lib\x86\SDL2.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+.\SDL2-2.0.8\lib\x86\SDL2main.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+.\SDL2-2.0.8\lib\x86\SDL2test.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+.\glew-2.1.0\lib\Release\Win32\glew32.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+D:\University\Year 2\Games For Games Engine (Github)\GamesForGamesEngines\x64\Debug\BlakeSkinnerCMP5334.exe : fatal error LNK1120: 32 unresolved externals
