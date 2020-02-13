@@ -184,6 +184,10 @@
     <ClCompile Include="TriangleRenderer.cpp" />
     <ClCompile Include="Utilcpp.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="fragmentshader.shader" />
+    <None Include="vertexshader.shader" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

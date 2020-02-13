@@ -1,0 +1,35 @@
+﻿  pch.cpp
+  BlakeSkinnerCMP5334.cpp
+  GameLoop.cpp
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(10): error C2144: syntax error: 'float' should be preceded by ';'
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(27): error C2065: 'viewMatrix': undeclared identifier
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(27): error C2065: 'position': undeclared identifier
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(27): error C2065: 'lookAt': undeclared identifier
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(32): error C2065: 'viewMatrix': undeclared identifier
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(36): error C2065: 'projectionMatrix': undeclared identifier
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(40): error C2065: 'position': undeclared identifier
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(44): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(48): error C2065: 'lookAt': undeclared identifier
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(49): error C2143: syntax error: missing ';' before '}'
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(52): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+  TriangleRenderer.cpp
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(10): error C2144: syntax error: 'float' should be preceded by ';'
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(27): error C2065: 'viewMatrix': undeclared identifier
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(27): error C2065: 'position': undeclared identifier
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(27): error C2065: 'lookAt': undeclared identifier
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(32): error C2065: 'viewMatrix': undeclared identifier
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(36): error C2065: 'projectionMatrix': undeclared identifier
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(40): error C2065: 'position': undeclared identifier
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(44): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(48): error C2065: 'lookAt': undeclared identifier
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(49): error C2143: syntax error: missing ';' before '}'
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\camera.h(52): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\trianglerenderer.cpp(18): error C2039: 'camera': is not a member of 'TriangleRenderer'
+  d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\trianglerenderer.h(9): note: see declaration of 'TriangleRenderer'
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\trianglerenderer.cpp(46): error C2065: 'vertexShaderSource': undeclared identifier
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\trianglerenderer.cpp(68): error C2374: 'fragmentShader': redefinition; multiple initialization
+  d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\trianglerenderer.cpp(60): note: see declaration of 'fragmentShader'
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\trianglerenderer.cpp(84): error C2065: 'fragmentShaderSource': undeclared identifier
+d:\university\year 2\games for games engine (github)\gamesforgamesengines\blakeskinnercmp5334\trianglerenderer.cpp(150): error C2065: 'camera': undeclared identifier
+  Utilcpp.cpp
+  Generating Code...

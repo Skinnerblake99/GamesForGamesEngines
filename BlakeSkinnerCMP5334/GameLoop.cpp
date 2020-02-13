@@ -11,6 +11,7 @@ GameLoop::GameLoop()
 GameLoop::~GameLoop()
 {
 	delete triangleRenderer;
+	delete camera;
 }
 
 void GameLoop::init()

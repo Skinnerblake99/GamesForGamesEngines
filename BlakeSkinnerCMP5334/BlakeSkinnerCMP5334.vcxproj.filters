@@ -45,4 +45,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="vertexshader.shader">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="fragmentshader.shader">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>
