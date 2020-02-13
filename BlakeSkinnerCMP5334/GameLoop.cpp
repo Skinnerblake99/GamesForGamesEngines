@@ -4,7 +4,8 @@
 
 GameLoop::GameLoop()
 {
-	triangleRenderer = new TriangleRenderer();
+	camera = new Camera();
+	triangleRenderer = new TriangleRenderer(camera);
 }
 
 GameLoop::~GameLoop()

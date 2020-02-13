@@ -19,7 +19,7 @@ public:
 private:
 
 	GLuint programId = 0;
-	GLint vertexPos2DLocation = -1;
+	GLint vertexPositionLocation = -1;
 
 	GLuint vertexBufferObject =0;
 	GLuint indexBufferObject = 0;

@@ -41,7 +41,7 @@ void TriangleRenderer::init() {
 	glShaderSource(vertexShader, 1, (const GLchar**)&shaderSource, NULL);
 	//sglShaderSource(vertexShader, 1, vertexShaderSource, Null);
 	glCompileShader(vertexShader);
-	};
+
 
 	glShaderSource(vertexShader, 1, vertexShaderSource, NULL);
 	glCompileShader(vertexShader);
@@ -58,13 +58,27 @@ void TriangleRenderer::init() {
 
 	//Next, the fragment shader source code needs to be loaded, compiled and then attached to the program
 	GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-
+	//Commented out 13/02/2020
 	//This is the fragment shader program source cide, This can be modified to be loaded from a file
-	const GLchar* fragmentShaderSource[] = 
+	//const GLchar* fragmentShaderSource[] = 
+	//{
+		//"#version 140\nout vec4 fragmentColor;"
+		//"void main() { fragmentColor = vec4(1.0,1.0,1.0,1.0);}"
+	//};
+	GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+
+	fileText = util.readFile("fragmentshader.shader");
+	shaderSource = fileText.c_str();
+
+	//Set fragment source
+	glShaderSource(fragmentShader, 1, (const GLchar**)&shaderSource, NULL);
+
+	if (vShaderCompiled != GL_TRUE)
 	{
-		"#version 140\nout vec4 fragmentColor;"
-		"void main() { fragmentColor = vec4(1.0,1.0,1.0,1.0);}"
-	};
+		printf("Unable to compile vertex shader %d!\n", vertexShader);
+		util.printShaderLog(vertexShader);
+		return;
+	}
 
     //Set fragment source
 	glShaderSource(fragmentShader, 1, fragmentShaderSource, NULL);
@@ -93,18 +107,22 @@ void TriangleRenderer::init() {
 		return;
 	}
 
-	vertexPos2DLocation = glGetAttribLocation(programId, "vertexPos2D");
+	vertexPositionLocation = glGetAttribLocation(programId, "vertexPosition");
 	
-	if (vertexPos2DLocation == -1)
+	if (vertexPositionLocation == -1)
 	{
-		printf("vertexPos2D is not a valid glsl program variable!\n");
+		printf("vertexPosition is not a valid glsl program variable!\n");
 		return;
 	}
+
+	modelMatrixLocation = glGetUniformLocation(programId, "modelMatrix");
+	viewMatrixLocation = glGetUniformLocation(programId, "viewMatrix");
+	projectionMatrixLocation = glGetUniformLocation(programId, "projectionMatrix");
 
 	//Create VBO
 	glGenBuffers(1, &vertexBufferObject);
 	glBindBuffer(GL_ARRAY_BUFFER, vertexBufferObject);
-	glBufferData(GL_ARRAY_BUFFER, 2 * 4 * sizeof(GLfloat), vertexData, GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, 3 * 4 * sizeof(GLfloat), vertexData, GL_STATIC_DRAW);
 
 	//Create IBO
 	glGenBuffers(1, &indexBufferObject);
@@ -121,24 +139,31 @@ void TriangleRenderer::update()
 void TriangleRenderer::draw()
 {
    //Bind program (the shader)
-   glUseProgram(programId);
-
+	glUseProgram(programId);
+	glm::vec3 translation = glm::vec3(0.0f, 0.0f, 0.0f);
+	glm::vec3 rotation = glm::vec3(90.0f, 00.0f, 0.0f);
+	glm::vec3 scale = glm::vec3(1.0f, 1.0f, 1.0f);
+	glm::mat4 modelMatrix = glm::mat4(1.0f);
+	modelMatrix = glm::rotate(modelMatrix, rotation.x * 180.0f / 3.14159265f, glm::vec3(1.0f, 0.0f, 0.0f));
+	modelMatrix = glm::rotate(modelMatrix, rotation.y * 180.0f / 3.14159265f, glm::vec3(1.0f, 0.0f, 0.0f));
+	modelMatrix = glm::rotate(modelMatrix, rotation.z * 180.0f / 3.14159265f, glm::vec3(1.0f, 0.0f, 0.0f));
+	camera->updateViewMatrix();
    //Enable vertex position
-   glEnableVertexAttribArray(vertexPos2DLocation);
+    glEnableVertexAttribArray(vertexPositionLocation);
 
    //Set vertex data
-   glBindBuffer(GL_ARRAY_BUFFER, vertexBufferObject);
-   glVertexAttribPointer(vertexPos2DLocation, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GLfloat), NULL);
+    glBindBuffer(GL_ARRAY_BUFFER, vertexBufferObject);
+    glVertexAttribPointer(vertexPositionLocation, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), NULL);
 
    //Set index data and render
-   glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBufferObject);
-   glDrawElements(GL_TRIANGLE_FAN, 4, GL_UNSIGNED_INT, NULL);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBufferObject);
+    glDrawElements(GL_TRIANGLE_FAN, 4, GL_UNSIGNED_INT, NULL);
 
    //Disable vertex positions
-   glDisableVertexAttribArray(vertexPos2DLocation);
+   glDisableVertexAttribArray(vertexPositionLocation);
 
    //Unbind program
-   glUseProgram(NULL);
+    glUseProgram(NULL);
 }
 
 void TriangleRenderer::clean()
