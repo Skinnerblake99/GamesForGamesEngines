@@ -72,23 +72,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>.\SDL2-2.0.8\lib\x86;.\glew-2.1.0\lib\Release\Win32;.\Assimp\lib\x86;$(LibraryPath)</LibraryPath>
-    <IncludePath>.\glm-0.9.7.1;.\SDL2-2.0.8\include;.\glew-2.1.0\include\GL;$(VC_IncludePath);$(WindowsSDK_IncludePath);.\Assimp Development Libraries\Assimp\include</IncludePath>
+    <LibraryPath>.\SDL2-2.0.8\lib\x86;.\glew-2.1.0\lib\Release\Win32;.\Assimp\lib\x86;$(LibraryPath);.\Assimp\lib\x86;.\Assimp\lib\x86;.\Assimp\lib\x86;.\Assimp\lib\x86;Z:\Year 2\Games for games engines\BlakeSkinnerCMP5334 - Fixed\BlakeSkinnerCMP5334\Assimp Development Libraries\Assimp\lib\x86</LibraryPath>
+    <IncludePath>.\Assimp\include;.\glm-0.9.7.1;.\SDL2-2.0.8\include;.\glew-2.1.0\include\GL;$(VC_IncludePath);$(WindowsSDK_IncludePath);.\Assimp Development Libraries\Assimp\include</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>.\SDL2-2.0.8\lib\x86;.\glew-2.1.0\lib\Release\Win32;.\Assimp\lib\x86;$(LibraryPath)</LibraryPath>
-    <IncludePath>.\glm-0.9.7.1;.\SDL2-2.0.8\include;.\glew-2.1.0\include\GL;$(VC_IncludePath);$(WindowsSDK_IncludePath);.\Assimp Development Libraries\Assimp\include</IncludePath>
+    <LibraryPath>.\SDL2-2.0.8\lib\x86;.\glew-2.1.0\lib\Release\Win32;.\Assimp\lib\x86;$(LibraryPath);.\Assimp\lib\x86;.\Assimp\lib\x86;.\Assimp\lib\x86;.\Assimp\lib\x86;Z:\Year 2\Games for games engines\BlakeSkinnerCMP5334 - Fixed\BlakeSkinnerCMP5334\Assimp Development Libraries\Assimp\lib\x86</LibraryPath>
+    <IncludePath>.\Assimp\include;.\glm-0.9.7.1;.\SDL2-2.0.8\include;.\glew-2.1.0\include\GL;$(VC_IncludePath);$(WindowsSDK_IncludePath);.\Assimp Development Libraries\Assimp\include</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <LibraryPath>.\SDL2-2.0.8\lib\x86;.\glew-2.1.0\lib\Release\Win32;$(LibraryPath)</LibraryPath>
-    <IncludePath>.\glm-0.9.7.1;.\SDL2-2.0.8\include;.\glew-2.1.0\include\GL;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>.\SDL2-2.0.8\lib\x86;.\glew-2.1.0\lib\Release\Win32;$(LibraryPath);.\Assimp\lib\x86;.\Assimp\lib\x86;.\Assimp\lib\x86;.\Assimp\lib\x86;Z:\Year 2\Games for games engines\BlakeSkinnerCMP5334 - Fixed\BlakeSkinnerCMP5334\Assimp Development Libraries\Assimp\lib\x86</LibraryPath>
+    <IncludePath>.\Assimp\include;.\glm-0.9.7.1;.\SDL2-2.0.8\include;.\glew-2.1.0\include\GL;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <LibraryPath>.\SDL2-2.0.8\lib\x86;.\glew-2.1.0\lib\Release\Win32;$(LibraryPath)</LibraryPath>
-    <IncludePath>.\glm-0.9.7.1;.\SDL2-2.0.8\include;.\glew-2.1.0\include\GL;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>.\SDL2-2.0.8\lib\x86;.\glew-2.1.0\lib\Release\Win32;$(LibraryPath);.\Assimp\lib\x86;.\Assimp\lib\x86;.\Assimp\lib\x86;.\Assimp\lib\x86;Z:\Year 2\Games for games engines\BlakeSkinnerCMP5334 - Fixed\BlakeSkinnerCMP5334\Assimp Development Libraries\Assimp\lib\x86</LibraryPath>
+    <IncludePath>.\Assimp\include;.\glm-0.9.7.1;.\SDL2-2.0.8\include;.\glew-2.1.0\include\GL;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -99,12 +99,12 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.\SDL2-2.0.8\include;.\glm-0.9.7.1;.\glew-2.1.0\include\GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\SDL2-2.0.8\include;.\glm-0.9.7.1;.\glew-2.1.0\include\GL;.\Assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glu32.lib;opengl32.lib;SDL2.lib;SDL2main.lib;SDL2test.lib;glew32.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glu32.lib;opengl32.lib;SDL2.lib;SDL2main.lib;SDL2test.lib;glew32.lib;assimp.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -116,12 +116,12 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.\SDL2-2.0.8\include;.\glm-0.9.7.1;.\glew-2.1.0\include\GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\SDL2-2.0.8\include;.\glm-0.9.7.1;.\glew-2.1.0\include\GL;.\Assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glu32.lib;opengl32.lib;SDL2.lib;SDL2main.lib;SDL2test.lib;glew32.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glu32.lib;opengl32.lib;SDL2.lib;SDL2main.lib;SDL2test.lib;glew32.lib;assimp.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -135,14 +135,14 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.\SDL2-2.0.8\include;.\glm-0.9.7.1;.\glew-2.1.0\include\GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\SDL2-2.0.8\include;.\glm-0.9.7.1;.\glew-2.1.0\include\GL;.\Assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glu32.lib;opengl32.lib;SDL2.lib;SDL2main.lib;SDL2test.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glu32.lib;opengl32.lib;SDL2.lib;SDL2main.lib;SDL2test.lib;glew32.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -156,14 +156,14 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.\SDL2-2.0.8\include;.\glm-0.9.7.1;.\glew-2.1.0\include\GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\SDL2-2.0.8\include;.\glm-0.9.7.1;.\glew-2.1.0\include\GL;.\Assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glu32.lib;opengl32.lib;SDL2.lib;SDL2main.lib;SDL2test.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glu32.lib;opengl32.lib;SDL2.lib;SDL2main.lib;SDL2test.lib;glew32.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
