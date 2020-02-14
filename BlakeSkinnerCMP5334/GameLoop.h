@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include "TriangleRenderer.h"
 #include "Camera.h"
+#include "Model.h"
 
 class GameLoop {
 public:
@@ -23,4 +24,5 @@ private:
 	SDL_GLContext glContext;
 	TriangleRenderer * triangleRenderer;
 	Camera * camera;
+
 };

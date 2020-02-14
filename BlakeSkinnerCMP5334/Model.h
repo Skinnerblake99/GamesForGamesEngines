@@ -37,7 +37,6 @@ public:
 			aiProcess_JoinIdenticalVertices |
 			aiProcess_SortByPType
 		);
-
 		if (!scene) {
 			printf("assimp file failed to load: %s", file);
 			return;
@@ -80,15 +79,17 @@ public:
 			ibos.push_back(indexBufferObject);
 			indexCounts.push_back(indices.size());
 		}
-	private:
-		//Transform of the model
-		glm::vec3 position;
-		glm::vec3 rotation;
-		glm::vec3 scale;
-
-		string file;
-		vector<GLuint> vbos;
-		vector<GLuint> ibos;
-		vector<int> indexCounts;
+	
+		
 	}
+private:
+	//Transform of the model
+	glm::vec3 position;
+	glm::vec3 rotation;
+	glm::vec3 scale;
+
+	string file;
+	vector<GLuint> vbos;
+	vector<GLuint> ibos;
+	vector<int> indexCounts;
 };
