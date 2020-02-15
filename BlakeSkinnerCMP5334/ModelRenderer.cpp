@@ -118,6 +118,12 @@ void ModelRenderer::renderModel(Model * m)
 	//Set vertex data
 	glBindBuffer(GL_ARRAY_BUFFER, m->vbos[0]);
 	glVertexAttribPointer(vertexPositionLocation, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), NULL);
+	glEnableVertexAttribArray(uvLocation);
+	glBindBuffer(GL_ARRAY_BUFFER, m->uvbos[0]);
+	glVertexAttribPointer(uvLocation, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GLfloat), NULL);
+	glActiveTexture(GL_TEXTURE0);
+	glUniform1i(textureSamplerLocation, 0);
+	glBindTexture(GL_TEXTURE_2D, m->texture->textureId);
 
 	//Set index data and render
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m->ibos[0]);

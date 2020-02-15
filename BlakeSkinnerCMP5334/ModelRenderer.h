@@ -20,10 +20,12 @@ private:
 
 	GLuint programId = 0;
 	GLint vertexPositionLocation = -1;
+	GLint uvLocation = -1;
 
 	GLuint modelMatrixLocation = -1;
 	GLuint viewMatrixLocation = -1;
 	GLuint projectionMatrixLocation = -1;
+	GLuint textureSamplerLocation = -1;
 
 	Camera* camera;
 	

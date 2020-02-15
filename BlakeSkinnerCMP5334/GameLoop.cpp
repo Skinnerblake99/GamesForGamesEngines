@@ -7,7 +7,9 @@ GameLoop::GameLoop()
 	camera = new Camera();
 	//triangleRenderer = new TriangleRenderer(camera);
 	modelRenderer = new ModelRenderer(camera);
-	model = new Model("monkey.obj");
+	//model = new Model("monkey.obj");
+	model = new Model("cube.obj");
+	brick = new Texture("brick.png");
 }
 
 GameLoop::~GameLoop()
@@ -59,6 +61,8 @@ void GameLoop::init()
 	//triangleRenderer->init();
 	modelRenderer->init();
 	model->init();
+	brick->init();
+	model->setTexture(brick);
 }
 
 bool GameLoop::handleInput()

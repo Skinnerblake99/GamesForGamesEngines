@@ -8,6 +8,7 @@
 #include "Camera.h"
 #include "Model.h"
 #include "ModelRenderer.h"
+
 class GameLoop {
 public:
 	GameLoop();
@@ -18,12 +19,13 @@ public:
 	void update();
 	void draw();
 	void clean();
-
+	Texture * brick;
 private:
 	SDL_Window * window;
 	SDL_GLContext glContext;
 	TriangleRenderer * triangleRenderer;
 	Camera * camera;
 	Model* model;
+	
 	ModelRenderer* modelRenderer;
 };
