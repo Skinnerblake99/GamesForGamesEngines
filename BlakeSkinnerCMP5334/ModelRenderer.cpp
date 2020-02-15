@@ -84,10 +84,20 @@ void ModelRenderer::init()
 		return;
 	}
 
+	uvLocation = glGetAttribLocation(programId, "uv");
+
+	if (uvLocation == -1)
+	{
+		printf("uv is not a valid glsl program variable!\n");
+		return;
+	}
+
 	modelMatrixLocation = glGetUniformLocation(programId, "modelMatrix");
 	viewMatrixLocation = glGetUniformLocation(programId, "viewMatrix");
 	projectionMatrixLocation = glGetUniformLocation(programId, "projectionMatrix");
+	textureSamplerLocation = glGetUniformLocation(programId, "textureSampler");
 }
+
 
 void ModelRenderer::renderModel(Model * m)
 {
@@ -121,13 +131,14 @@ void ModelRenderer::renderModel(Model * m)
 	glEnableVertexAttribArray(uvLocation);
 	glBindBuffer(GL_ARRAY_BUFFER, m->uvbos[0]);
 	glVertexAttribPointer(uvLocation, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GLfloat), NULL);
+	//Set the texture
 	glActiveTexture(GL_TEXTURE0);
 	glUniform1i(textureSamplerLocation, 0);
 	glBindTexture(GL_TEXTURE_2D, m->texture->textureId);
 
 	//Set index data and render
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m->ibos[0]);
-
+	
 	glDrawElements(GL_TRIANGLES, m->indexCounts[0], GL_UNSIGNED_INT, NULL);
 
 	//Disable vertex position

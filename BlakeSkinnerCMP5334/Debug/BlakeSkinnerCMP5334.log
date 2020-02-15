@@ -1,12 +1,6 @@
-﻿  GameLoop.cpp
+﻿  ModelRenderer.cpp
 d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model.h(41): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'std::string'
 d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model.h(44): warning C4018: '<': signed/unsigned mismatch
 d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model.h(49): warning C4018: '<': signed/unsigned mismatch
 d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model.h(59): warning C4018: '<': signed/unsigned mismatch
-  ModelRenderer.cpp
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model.h(41): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'std::string'
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model.h(44): warning C4018: '<': signed/unsigned mismatch
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model.h(49): warning C4018: '<': signed/unsigned mismatch
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model.h(59): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
   BlakeSkinnerCMP5334.vcxproj -> D:\University\Year 2\Games For games engines github\GamesForGamesEngines\Debug\BlakeSkinnerCMP5334.exe

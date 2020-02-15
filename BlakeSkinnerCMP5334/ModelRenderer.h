@@ -26,7 +26,6 @@ private:
 	GLuint viewMatrixLocation = -1;
 	GLuint projectionMatrixLocation = -1;
 	GLuint textureSamplerLocation = -1;
-
 	Camera* camera;
 	
 };
