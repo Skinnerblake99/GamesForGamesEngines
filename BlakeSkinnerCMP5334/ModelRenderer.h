@@ -24,6 +24,6 @@ private:
 	GLuint viewMatrixLocation = -1;
 	GLuint projectionMatrixLocation = -1;
 
-	Camera * camera;
-
+	Camera* camera;
+	
 };

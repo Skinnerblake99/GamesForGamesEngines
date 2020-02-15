@@ -5,13 +5,17 @@
 GameLoop::GameLoop()
 {
 	camera = new Camera();
-	triangleRenderer = new TriangleRenderer(camera);
+	//triangleRenderer = new TriangleRenderer(camera);
+	modelRenderer = new ModelRenderer(camera);
+	model = new Model("monkey.obj");
 }
 
 GameLoop::~GameLoop()
 {
-	delete triangleRenderer;
+	//delete triangleRenderer;
 	delete camera;
+	delete model;
+	delete modelRenderer;
 }
 
 void GameLoop::init()
@@ -52,8 +56,9 @@ void GameLoop::init()
 		printf("Warning: Unable to set VSync! SDL Error: %s/n", SDL_GetError());
 	}
 
-	triangleRenderer->init();
-
+	//triangleRenderer->init();
+	modelRenderer->init();
+	model->init();
 }
 
 bool GameLoop::handleInput()
@@ -74,8 +79,9 @@ void GameLoop::draw()
 	//clear the screen to cornflower blue
 	glClearColor(0.392f, 0.584f, 0.929f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
-
-	triangleRenderer->draw();
+	glDisable(GL_CULL_FACE);
+	modelRenderer->renderModel(model);
+	//triangleRenderer->draw();
 	//present the screen
 	SDL_GL_SwapWindow(window);
 }

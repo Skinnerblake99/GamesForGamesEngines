@@ -24,5 +24,7 @@ private:
 	SDL_GLContext glContext;
 	TriangleRenderer * triangleRenderer;
 	Camera * camera;
-	
+	Camera* camera;
+	Model* model;
+	ModelRenderer* modelRenderer;
 };
