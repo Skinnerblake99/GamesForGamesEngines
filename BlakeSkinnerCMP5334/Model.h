@@ -1,5 +1,5 @@
 #pragma once
-
+#include "pch.h"
 #include <SDL.h>
 #include <glew.h>
 #include <SDL_opengl.h>

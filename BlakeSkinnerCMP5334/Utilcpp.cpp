@@ -17,9 +17,6 @@ struct Util {
 		return fileString;
 	}
 
-
-
-
 	void printShaderLog(GLuint shader)
 	{
 		//Shader log length
