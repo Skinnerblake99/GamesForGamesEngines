@@ -115,7 +115,7 @@ void ModelRenderer::renderModel(Model * m)
 	modelMatrix = glm::translate(modelMatrix, translation);
 	modelMatrix = glm::scale(modelMatrix, scale);
 
-	camera->updateViewMatrix();
+	//camera->updateViewMatrix();
 
 
 	glUniformMatrix4fv(modelMatrixLocation, 1, GL_FALSE, glm::value_ptr(modelMatrix));

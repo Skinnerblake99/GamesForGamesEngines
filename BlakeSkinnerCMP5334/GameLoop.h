@@ -8,6 +8,7 @@
 #include "Camera.h"
 #include "Model.h"
 #include "ModelRenderer.h"
+#include "FPSCamera.h"
 
 class GameLoop {
 public:
@@ -24,8 +25,8 @@ private:
 	SDL_Window * window;
 	SDL_GLContext glContext;
 	TriangleRenderer * triangleRenderer;
-	Camera * camera;
+	//Camera * camera;
 	Model* model;
-	
+	FPSCamera * camera;
 	ModelRenderer* modelRenderer;
 };

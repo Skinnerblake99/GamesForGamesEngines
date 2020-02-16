@@ -4,7 +4,7 @@
 
 GameLoop::GameLoop()
 {
-	camera = new Camera();
+	camera = new FPSCamera(this->window);
 	//triangleRenderer = new TriangleRenderer(camera);
 	modelRenderer = new ModelRenderer(camera);
 	//model = new Model("monkey.obj");
@@ -72,18 +72,21 @@ bool GameLoop::handleInput()
 		if (e.type == SDL_QUIT) {
 			return false;
 		}
+		camera->handleInput(e);
 	}
 	return true;
 }
 
-void GameLoop::update(){}
+void GameLoop::update(){
+	camera->update();
+}
 
 void GameLoop::draw()
 {
 	//clear the screen to cornflower blue
 	glClearColor(0.392f, 0.584f, 0.929f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
-	glDisable(GL_CULL_FACE);
+	glEnable(GL_CULL_FACE);
 	modelRenderer->renderModel(model);
 	//triangleRenderer->draw();
 	//present the screen

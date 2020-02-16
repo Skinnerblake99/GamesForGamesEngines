@@ -43,12 +43,12 @@ public:
 	void setLookAt(float x, float y, float z) {
 		this->lookAt = glm::vec3(x, y, z);
 	}
-private:
+protected :
 	glm::mat4 viewMatrix;
 	glm::mat4 projectionMatrix;
 
 	glm::vec3 position;
 	glm::vec3 lookAt;
-	//};
+	
 
 };
