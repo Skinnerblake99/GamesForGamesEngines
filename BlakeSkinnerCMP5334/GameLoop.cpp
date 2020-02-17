@@ -9,7 +9,9 @@ GameLoop::GameLoop()
 	modelRenderer = new ModelRenderer(camera);
 	//model = new Model("monkey.obj");
 	model = new Model("cube.obj");
+	model2 = new Model2 ("cube.obj");
 	brick = new Texture("brick.png");
+	ground = new Texture("ground.png");
 }
 
 GameLoop::~GameLoop()
@@ -17,6 +19,7 @@ GameLoop::~GameLoop()
 	//delete triangleRenderer;
 	delete camera;
 	delete model;
+	delete model2;
 	delete modelRenderer;
 }
 
@@ -61,8 +64,11 @@ void GameLoop::init()
 	//triangleRenderer->init();
 	modelRenderer->init();
 	model->init();
+	model2->init();
 	brick->init();
+	ground->init();
 	model->setTexture(brick);
+	model2->setTexture(ground);
 }
 
 bool GameLoop::handleInput()
@@ -88,6 +94,7 @@ void GameLoop::draw()
 	glClear(GL_COLOR_BUFFER_BIT);
 	glEnable(GL_CULL_FACE);
 	modelRenderer->renderModel(model);
+	modelRenderer->renderModel2(model2);
 	//triangleRenderer->draw();
 	//present the screen
 	SDL_GL_SwapWindow(window);

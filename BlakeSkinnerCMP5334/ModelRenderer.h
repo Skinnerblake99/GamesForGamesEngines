@@ -9,6 +9,7 @@
 #include "Camera.h"
 #include "Model.h"
 #include "Utilcpp.cpp"
+#include "Model2.h"
 class ModelRenderer {
 public:
 	ModelRenderer(Camera * camera);
@@ -16,6 +17,7 @@ public:
 
 	void init();
 	void renderModel(Model * m);
+	void renderModel2(Model2 * m);
 private:
 
 	GLuint programId = 0;
