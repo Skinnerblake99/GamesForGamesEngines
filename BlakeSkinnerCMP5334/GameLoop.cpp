@@ -62,11 +62,14 @@ void GameLoop::init()
 	}
 
 	//triangleRenderer->init();
+	//Spawn mdoels in
 	modelRenderer->init();
 	model->init();
 	model2->init();
+	//Initalise the texure
 	brick->init();
 	ground->init();
+	//set the texture to relevant model
 	model->setTexture(brick);
 	model2->setTexture(ground);
 }
