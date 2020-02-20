@@ -18,6 +18,7 @@ public:
 	void init();
 	void renderModel(Model * m);
 	void renderModel2(Model2 * m);
+	void renderTerrain(Terrain * t);
 private:
 
 	GLuint programId = 0;

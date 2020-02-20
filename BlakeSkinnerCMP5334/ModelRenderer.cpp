@@ -197,3 +197,51 @@ void ModelRenderer::renderModel2(Model2 * a)
 	glUseProgram(NULL);
 }
 
+void ModelRenderer::renderTerrain(Terrain * t)
+{
+	//Bind program (the shader)
+	glUseProgram(programId);
+
+	glm::vec3 translation = glm::vec3(0, -50, 0);
+	glm::vec3 rotation = glm::vec3(0, 0, 0);
+	glm::vec3 scale = glm::vec3(1, 1, 1);
+
+	glm::mat4 modelMatrix = glm::mat4(1.0f);
+	modelMatrix = glm::rotate(modelMatrix, rotation.x * 180.0f / 3.14159265f, glm::vec3(1.0f, 0.0f, 0.0f));
+	modelMatrix = glm::rotate(modelMatrix, rotation.y * 180.0f / 3.14159265f, glm::vec3(0.0f, 1.0f, 0.0f));
+	modelMatrix = glm::rotate(modelMatrix, rotation.z * 180.0f / 3.14159265f, glm::vec3(0.0f, 0.0f, 1.0f));
+	modelMatrix = glm::translate(modelMatrix, translation);
+	modelMatrix = glm::scale(modelMatrix, scale);
+
+	glUniformMatrix4fv(modelMatrixLocation, 1, GL_FALSE, glm::value_ptr(modelMatrix));
+	glUniformMatrix4fv(viewMatrixLocation, 1, GL_FALSE, glm::value_ptr(camera->getViewMatrix()));
+	glUniformMatrix4fv(projectionMatrixLocation, 1, GL_FALSE, glm::value_ptr(camera->getprojectionMatrix()));
+
+	//Enable vertex position
+	glEnableVertexAttribArray(vertexPositionLocation);
+
+	//Set vertex data
+	glBindBuffer(GL_ARRAY_BUFFER, t->vertexBufferObject);
+	glVertexAttribPointer(vertexPositionLocation, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), NULL);
+
+	glEnableVertexAttribArray(uvLocation);
+	glBindBuffer(GL_ARRAY_BUFFER, t->uvBufferObject);
+	glVertexAttribPointer(uvLocation, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GLfloat), NULL);
+
+	//set the texture
+	glActiveTexture(GL_TEXTURE0);
+	glUniform1i(textureSamplerLocation, 0);
+	glBindTexture(GL_TEXTURE_2D, t->texture->textureId);
+
+	//Set index data and render
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, t->indexBufferObject);
+
+	glDrawElements(GL_TRIANGLES, t->indexCount, GL_UNSIGNED_INT, NULL);
+
+	//Disable vertex position
+	glDisableVertexAttribArray(vertexPositionLocation);
+
+	//Unbind program
+	glUseProgram(NULL);
+}
+

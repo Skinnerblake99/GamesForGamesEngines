@@ -32,4 +32,7 @@ private:
 	Model2 * model2;
 	FPSCamera * camera;
 	ModelRenderer* modelRenderer;
+
+	Terrain * terrain;
+	Texture * terrainTexture;
 };

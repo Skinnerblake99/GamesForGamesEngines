@@ -12,6 +12,8 @@ GameLoop::GameLoop()
 	model2 = new Model2 ("cube.obj");
 	brick = new Texture("brick.png");
 	ground = new Texture("ground.png");
+	terrainTexture = new Texture("terrain-texture.png");
+	terrain = new Terrain("terrain-heightmap.png", terrainTexture);
 }
 
 GameLoop::~GameLoop()
@@ -21,6 +23,8 @@ GameLoop::~GameLoop()
 	delete model;
 	delete model2;
 	delete modelRenderer;
+	delete terrainTexture;
+	delete terrain;
 }
 
 void GameLoop::init()
@@ -72,6 +76,8 @@ void GameLoop::init()
 	//set the texture to relevant model
 	model->setTexture(brick);
 	model2->setTexture(ground);
+	terrainTexture->init();
+	terrain->init();
 }
 
 bool GameLoop::handleInput()
@@ -101,6 +107,11 @@ void GameLoop::draw()
 	//triangleRenderer->draw();
 	//present the screen
 	SDL_GL_SwapWindow(window);
+	glClear(GL_COLOR_BUFFER_BIT);
+	glEnable(GL_CULL_FACE);
+	glEnable(GL_DEPTH_TEST);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	modelRenderer->renderTerrain(terrain);
 }
 
 void GameLoop::clean()
