@@ -16,7 +16,7 @@ public:
 	friend class ModelRenderer;
 	//Size of the plane
 	Model2(string file) {
-		position = glm::vec3(0, -1.1, 1);
+		position = glm::vec3(0, 10, 1);
 		rotation = glm::vec3(0, 45, 0);
 		scale = glm::vec3(50.0f, 0.0f, 50.0f);
 		this->file = file;

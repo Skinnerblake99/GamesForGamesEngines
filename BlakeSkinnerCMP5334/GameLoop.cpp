@@ -102,16 +102,17 @@ void GameLoop::draw()
 	glClearColor(0.392f, 0.584f, 0.929f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
 	glEnable(GL_CULL_FACE);
+	glEnable(GL_DEPTH_TEST);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	modelRenderer->renderModel(model);
 	modelRenderer->renderModel2(model2);
+	modelRenderer->renderTerrain(terrain);
 	//triangleRenderer->draw();
 	//present the screen
 	SDL_GL_SwapWindow(window);
-	glClear(GL_COLOR_BUFFER_BIT);
-	glEnable(GL_CULL_FACE);
-	glEnable(GL_DEPTH_TEST);
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	modelRenderer->renderTerrain(terrain);
+	
+	
+	
 }
 
 void GameLoop::clean()

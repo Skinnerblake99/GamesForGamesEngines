@@ -10,6 +10,7 @@
 #include "ModelRenderer.h"
 #include "Model2.h"
 #include "FPSCamera.h"
+#include "Terrain.h"
 
 class GameLoop {
 public:

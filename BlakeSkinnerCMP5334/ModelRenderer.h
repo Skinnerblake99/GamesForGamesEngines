@@ -10,6 +10,7 @@
 #include "Model.h"
 #include "Utilcpp.cpp"
 #include "Model2.h"
+#include "Terrain.h"
 class ModelRenderer {
 public:
 	ModelRenderer(Camera * camera);
