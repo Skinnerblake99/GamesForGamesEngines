@@ -11,7 +11,7 @@
 #include "Model2.h"
 #include "FPSCamera.h"
 #include "Terrain.h"
-
+#include "Billboard.h"
 class GameLoop {
 public:
 	GameLoop();
@@ -36,4 +36,9 @@ private:
 
 	Terrain * terrain;
 	Texture * terrainTexture;
+
+	Texture * sky1;
+	Skydome * skydome;
+
+	Billboard * billboard;
 };

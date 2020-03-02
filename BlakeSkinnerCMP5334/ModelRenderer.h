@@ -11,15 +11,19 @@
 #include "Utilcpp.cpp"
 #include "Model2.h"
 #include "Terrain.h"
+#include "Skydome.h"
+#include "FPSCamera.h"
+#include "Billboard.h"
 class ModelRenderer {
 public:
-	ModelRenderer(Camera * camera);
+	ModelRenderer(FPSCamera * camera);
 	virtual ~ModelRenderer();
 
 	void init();
 	void renderModel(Model * m);
 	void renderModel2(Model2 * m);
 	void renderTerrain(Terrain * t);
+	void renderSkydome(Skydome * s);
 private:
 
 	GLuint programId = 0;
@@ -30,6 +34,6 @@ private:
 	GLuint viewMatrixLocation = -1;
 	GLuint projectionMatrixLocation = -1;
 	GLuint textureSamplerLocation = -1;
-	Camera* camera;
+	FPSCamera* camera;
 	
 };

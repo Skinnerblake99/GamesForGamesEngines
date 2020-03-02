@@ -74,7 +74,7 @@ public:
 			vBuffer.push_back(vertices[i].y);
 			vBuffer.push_back(vertices[i].z);
 		}
-		std::vector<GLfloat> vBuffer;
+		std::vector<GLfloat> uvBuffer;
 		for (int i = 0; i < uv.size(); i++) {
 			uvBuffer.push_back(uv[i].x);
 			uvBuffer.push_back(uv[i].y);
@@ -83,7 +83,7 @@ public:
 		indexCount = indices.size();
 
 		glGenBuffers(1, &vertexBufferObject);
-		glBindBuffer(GL_ARRAY_BUFFER, vertextBufferObject);
+		glBindBuffer(GL_ARRAY_BUFFER, vertexBufferObject);
 		glBufferData(GL_ARRAY_BUFFER, vBuffer.size() * sizeof(GLfloat), &vBuffer[0], GL_STATIC_DRAW);
 
 		glGenBuffers(1, &uvBufferObject);
@@ -99,10 +99,9 @@ public:
 
 private:
 
-	GLuint vertextBufferObject;
+	GLuint vertexBufferObject;
 	GLuint uvBufferObject;
 	GLuint indexBufferObject;
-
 	Texture * texture;
 
 	__int32 indexCount;

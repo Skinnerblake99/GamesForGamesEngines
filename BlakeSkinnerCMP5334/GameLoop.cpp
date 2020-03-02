@@ -14,6 +14,11 @@ GameLoop::GameLoop()
 	ground = new Texture("ground.png");
 	terrainTexture = new Texture("terrain-texture.png");
 	terrain = new Terrain("terrain-heightmap.png", terrainTexture);
+
+	sky1 = new Texture("skydome.jpg");
+	skydome = new Skydome(sky1);
+
+	billboard = new Billboard(brick);
 }
 
 GameLoop::~GameLoop()
@@ -25,6 +30,8 @@ GameLoop::~GameLoop()
 	delete modelRenderer;
 	delete terrainTexture;
 	delete terrain;
+	delete skydome;
+	delete billboard;
 }
 
 void GameLoop::init()
@@ -78,6 +85,9 @@ void GameLoop::init()
 	model2->setTexture(ground);
 	terrainTexture->init();
 	terrain->init();
+	sky1->init();
+	skydome->init();
+	billboard->init();
 }
 
 bool GameLoop::handleInput()
@@ -107,6 +117,8 @@ void GameLoop::draw()
 	modelRenderer->renderModel(model);
 	modelRenderer->renderModel2(model2);
 	modelRenderer->renderTerrain(terrain);
+	modelRenderer->renderSkydome(skydome);
+	modelRenderer->renderBillboard(billboard);
 	//triangleRenderer->draw();
 	//present the screen
 	SDL_GL_SwapWindow(window);
