@@ -30,7 +30,8 @@ private:
 	TriangleRenderer * triangleRenderer;
 	//Camera * camera;
 	Model* model;
-	Model2 * model2;
+	Model * model2;
+	//Model2 * model2;
 	FPSCamera * camera;
 	ModelRenderer* modelRenderer;
 

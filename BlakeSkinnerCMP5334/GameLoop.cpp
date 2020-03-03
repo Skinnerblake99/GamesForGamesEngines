@@ -9,9 +9,10 @@ GameLoop::GameLoop()
 	modelRenderer = new ModelRenderer(camera);
 	//model = new Model("monkey.obj");
 	model = new Model("cube.obj");
-	model2 = new Model2 ("cube.obj");
+	model2 = new Model("cube.obj");
+	//model2 = new Model2 ("cube.obj");
 	brick = new Texture("brick.png");
-	ground = new Texture("ground.png");
+	//ground = new Texture("ground.png");
 	terrainTexture = new Texture("terrain-texture.png");
 	terrain = new Terrain("terrain-heightmap.png", terrainTexture);
 
@@ -26,7 +27,7 @@ GameLoop::~GameLoop()
 	//delete triangleRenderer;
 	delete camera;
 	delete model;
-	delete model2;
+	//delete model2;
 	delete modelRenderer;
 	delete terrainTexture;
 	delete terrain;
@@ -77,12 +78,15 @@ void GameLoop::init()
 	modelRenderer->init();
 	model->init();
 	model2->init();
+	//model2->init();
 	//Initalise the texure
 	brick->init();
-	ground->init();
+	//ground->init();
 	//set the texture to relevant model
 	model->setTexture(brick);
-	model2->setTexture(ground);
+	model2->setTexture(brick);
+	model2->setPosition(10, 1, 10);
+	//model2->setTexture(ground);
 	terrainTexture->init();
 	terrain->init();
 	sky1->init();
@@ -114,16 +118,15 @@ void GameLoop::draw()
 	glEnable(GL_CULL_FACE);
 	glEnable(GL_DEPTH_TEST);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	modelRenderer->renderModel(model);
-	modelRenderer->renderModel2(model2);
-	modelRenderer->renderTerrain(terrain);
 	modelRenderer->renderSkydome(skydome);
+	modelRenderer->renderModel(model);
+	modelRenderer->renderModel(model2);
+	//modelRenderer->renderModel2(model2);
+	modelRenderer->renderTerrain(terrain);
 	modelRenderer->renderBillboard(billboard);
 	//triangleRenderer->draw();
 	//present the screen
 	SDL_GL_SwapWindow(window);
-	
-	
 	
 }
 

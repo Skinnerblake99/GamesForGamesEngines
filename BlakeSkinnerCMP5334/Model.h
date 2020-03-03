@@ -92,6 +92,10 @@ public:
 	
 		
 	}
+
+	void setPosition(float x, float y, float z) {
+		position = glm::vec3(x, y, z);
+	}
 private:
 	//Transform of the model
 	glm::vec3 position;

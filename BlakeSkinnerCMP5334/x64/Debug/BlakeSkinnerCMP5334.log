@@ -1,64 +1,69 @@
-﻿  GameLoop.cpp
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model.h(41): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'std::string'
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model.h(44): warning C4018: '<': signed/unsigned mismatch
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model.h(49): warning C4018: '<': signed/unsigned mismatch
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model.h(59): warning C4018: '<': signed/unsigned mismatch
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model.h(90): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
-          with
-          [
-              _Ty=int
-          ]
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model2.h(40): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'std::string'
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model2.h(43): warning C4018: '<': signed/unsigned mismatch
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model2.h(48): warning C4018: '<': signed/unsigned mismatch
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model2.h(58): warning C4018: '<': signed/unsigned mismatch
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model2.h(89): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
-          with
-          [
-              _Ty=int
-          ]
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\skydome.h(26): warning C4305: 'initializing': truncation from 'double' to 'float'
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\skydome.h(77): error C2086: 'std::vector<GLfloat,std::allocator<_Ty>> vBuffer': redefinition
-          with
-          [
-              _Ty=GLfloat
-          ]
-  d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\skydome.h(71): note: see declaration of 'vBuffer'
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\skydome.h(79): error C2065: 'uvBuffer': undeclared identifier
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\skydome.h(80): error C2065: 'uvBuffer': undeclared identifier
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\skydome.h(83): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\skydome.h(91): error C2065: 'uvBuffer': undeclared identifier
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\skydome.h(91): error C2198: 'PFNGLBUFFERDATAPROC': too few arguments for call
-  ModelRenderer.cpp
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model.h(41): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'std::string'
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model.h(44): warning C4018: '<': signed/unsigned mismatch
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model.h(49): warning C4018: '<': signed/unsigned mismatch
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model.h(59): warning C4018: '<': signed/unsigned mismatch
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model.h(90): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
-          with
-          [
-              _Ty=int
-          ]
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model2.h(40): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'std::string'
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model2.h(43): warning C4018: '<': signed/unsigned mismatch
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model2.h(48): warning C4018: '<': signed/unsigned mismatch
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model2.h(58): warning C4018: '<': signed/unsigned mismatch
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\model2.h(89): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
-          with
-          [
-              _Ty=int
-          ]
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\skydome.h(26): warning C4305: 'initializing': truncation from 'double' to 'float'
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\skydome.h(77): error C2086: 'std::vector<GLfloat,std::allocator<_Ty>> vBuffer': redefinition
-          with
-          [
-              _Ty=GLfloat
-          ]
-  d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\skydome.h(71): note: see declaration of 'vBuffer'
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\skydome.h(79): error C2065: 'uvBuffer': undeclared identifier
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\skydome.h(80): error C2065: 'uvBuffer': undeclared identifier
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\skydome.h(83): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\skydome.h(91): error C2065: 'uvBuffer': undeclared identifier
-d:\university\year 2\games for games engines github\gamesforgamesengines\blakeskinnercmp5334\skydome.h(91): error C2198: 'PFNGLBUFFERDATAPROC': too few arguments for call
-  Utilcpp.cpp
-  Generating Code...
+﻿  Utilcpp.cpp
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_GetError referenced in function "public: void __cdecl GameLoop::init(void)" (?init@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_FreeSurface referenced in function "public: void __cdecl Texture::init(void)" (?init@Texture@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_CreateWindow referenced in function "public: void __cdecl GameLoop::init(void)" (?init@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_DestroyWindow referenced in function "public: void __cdecl GameLoop::clean(void)" (?clean@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_GL_SetAttribute referenced in function "public: void __cdecl GameLoop::init(void)" (?init@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_GL_CreateContext referenced in function "public: void __cdecl GameLoop::init(void)" (?init@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_GL_SetSwapInterval referenced in function "public: void __cdecl GameLoop::init(void)" (?init@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_GL_SwapWindow referenced in function "public: void __cdecl GameLoop::draw(void)" (?draw@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_GetMouseState referenced in function "public: __cdecl FPSCamera::FPSCamera(struct SDL_Window *)" (??0FPSCamera@@QEAA@PEAUSDL_Window@@@Z)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_WarpMouseInWindow referenced in function "public: void __cdecl FPSCamera::update(void)" (?update@FPSCamera@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_PollEvent referenced in function "public: bool __cdecl GameLoop::handleInput(void)" (?handleInput@GameLoop@@QEAA_NXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_Init referenced in function "public: void __cdecl GameLoop::init(void)" (?init@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol SDL_Quit referenced in function "public: void __cdecl GameLoop::clean(void)" (?clean@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol __imp_glewInit referenced in function "public: void __cdecl GameLoop::init(void)" (?init@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol __imp_glewGetErrorString referenced in function "public: void __cdecl GameLoop::init(void)" (?init@GameLoop@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol "public: __cdecl Assimp::Importer::Importer(void)" (??0Importer@Assimp@@QEAA@XZ) referenced in function "public: void __cdecl Model2::init(void)" (?init@Model2@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol "public: __cdecl Assimp::Importer::~Importer(void)" (??1Importer@Assimp@@QEAA@XZ) referenced in function "public: void __cdecl Model2::init(void)" (?init@Model2@@QEAAXXZ)
+GameLoop.obj : error LNK2019: unresolved external symbol "public: struct aiScene const * __cdecl Assimp::Importer::ReadFile(char const *,unsigned int)" (?ReadFile@Importer@Assimp@@QEAAPEBUaiScene@@PEBDI@Z) referenced in function "public: struct aiScene const * __cdecl Assimp::Importer::ReadFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,unsigned int)" (?ReadFile@Importer@Assimp@@QEAAPEBUaiScene@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@I@Z)
+GameLoop.obj : error LNK2019: unresolved external symbol IMG_Load referenced in function "public: void __cdecl Terrain::init(void)" (?init@Terrain@@QEAAXXZ)
+GameLoop.obj : error LNK2001: unresolved external symbol __imp___glewBindBuffer
+ModelRenderer.obj : error LNK2001: unresolved external symbol __imp___glewBindBuffer
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewBindBuffer
+GameLoop.obj : error LNK2001: unresolved external symbol __imp___glewBufferData
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewBufferData
+GameLoop.obj : error LNK2001: unresolved external symbol __imp___glewGenBuffers
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewGenBuffers
+GameLoop.obj : error LNK2001: unresolved external symbol __imp_glewExperimental
+ModelRenderer.obj : error LNK2001: unresolved external symbol __imp___glewActiveTexture
+ModelRenderer.obj : error LNK2001: unresolved external symbol __imp___glewAttachShader
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewAttachShader
+ModelRenderer.obj : error LNK2001: unresolved external symbol __imp___glewCompileShader
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewCompileShader
+ModelRenderer.obj : error LNK2001: unresolved external symbol __imp___glewCreateProgram
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewCreateProgram
+ModelRenderer.obj : error LNK2001: unresolved external symbol __imp___glewCreateShader
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewCreateShader
+ModelRenderer.obj : error LNK2001: unresolved external symbol __imp___glewDisableVertexAttribArray
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewDisableVertexAttribArray
+ModelRenderer.obj : error LNK2001: unresolved external symbol __imp___glewEnableVertexAttribArray
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewEnableVertexAttribArray
+ModelRenderer.obj : error LNK2001: unresolved external symbol __imp___glewGetAttribLocation
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewGetAttribLocation
+ModelRenderer.obj : error LNK2001: unresolved external symbol __imp___glewGetProgramiv
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewGetProgramiv
+ModelRenderer.obj : error LNK2001: unresolved external symbol __imp___glewGetShaderInfoLog
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewGetShaderInfoLog
+ModelRenderer.obj : error LNK2001: unresolved external symbol __imp___glewGetShaderiv
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewGetShaderiv
+ModelRenderer.obj : error LNK2001: unresolved external symbol __imp___glewGetUniformLocation
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewGetUniformLocation
+ModelRenderer.obj : error LNK2001: unresolved external symbol __imp___glewLinkProgram
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewLinkProgram
+ModelRenderer.obj : error LNK2001: unresolved external symbol __imp___glewShaderSource
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewShaderSource
+ModelRenderer.obj : error LNK2001: unresolved external symbol __imp___glewUniform1i
+ModelRenderer.obj : error LNK2001: unresolved external symbol __imp___glewUniformMatrix4fv
+ModelRenderer.obj : error LNK2001: unresolved external symbol __imp___glewUseProgram
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewUseProgram
+ModelRenderer.obj : error LNK2001: unresolved external symbol __imp___glewVertexAttribPointer
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewVertexAttribPointer
+TriangleRenderer.obj : error LNK2001: unresolved external symbol __imp___glewDeleteProgram
+SDL2.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+SDL2main.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+SDL2test.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+.\glew-2.1.0\lib\Release\Win32\glew32.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+.\Assimp Development Libraries\Assimp\lib\x86\assimp.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+SDL2_image.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+V:\Blake Temp\GamesForGamesEngines\x64\Debug\BlakeSkinnerCMP5334.exe : fatal error LNK1120: 42 unresolved externals

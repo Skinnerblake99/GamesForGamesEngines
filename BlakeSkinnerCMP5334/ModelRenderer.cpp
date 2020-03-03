@@ -255,54 +255,54 @@ void ModelRenderer::renderBillboard(Billboard * b)
 
 
 
-void ModelRenderer::renderModel2(Model2 * a)
-{
-	//Bind program (the shader)
-	glUseProgram(programId);
-
-	glm::vec3 translation = a->position;
-	glm::vec3 rotation = a->rotation;
-	glm::vec3 scale = a->scale;
-
-	glm::mat4 modelMatrix = glm::mat4(1.0f);
-	modelMatrix = glm::rotate(modelMatrix, rotation.x * 180.0f / 3.14159265f, glm::vec3(1.0f, 0.0f, 0.0f));
-	modelMatrix = glm::rotate(modelMatrix, rotation.y * 180.0f / 3.14159265f, glm::vec3(0.0f, 1.0f, 0.0f));
-	modelMatrix = glm::rotate(modelMatrix, rotation.z * 180.0f / 3.14159265f, glm::vec3(0.0f, 0.0f, 1.0f));
-	modelMatrix = glm::translate(modelMatrix, translation);
-	modelMatrix = glm::scale(modelMatrix, scale);
-
-	//camera->updateViewMatrix();
-
-
-	glUniformMatrix4fv(modelMatrixLocation, 1, GL_FALSE, glm::value_ptr(modelMatrix));
-	glUniformMatrix4fv(viewMatrixLocation, 1, GL_FALSE, glm::value_ptr(camera->getViewMatrix()));
-	glUniformMatrix4fv(projectionMatrixLocation, 1, GL_FALSE, glm::value_ptr(camera->getprojectionMatrix()));
-
-	//Enable vertex position
-	glEnableVertexAttribArray(vertexPositionLocation);
-
-	//Set vertex data
-	glBindBuffer(GL_ARRAY_BUFFER, a->vbos[0]);
-	glVertexAttribPointer(vertexPositionLocation, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), NULL);
-	glEnableVertexAttribArray(uvLocation);
-	glBindBuffer(GL_ARRAY_BUFFER, a->uvbos[0]);
-	glVertexAttribPointer(uvLocation, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GLfloat), NULL);
-	//Set the texture
-	glActiveTexture(GL_TEXTURE0);
-	glUniform1i(textureSamplerLocation, 0);
-	glBindTexture(GL_TEXTURE_2D, a->texture->textureId);
-
-	//Set index data and render
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, a->ibos[0]);
-
-	glDrawElements(GL_TRIANGLES, a->indexCounts[0], GL_UNSIGNED_INT, NULL);
-
-	//Disable vertex position
-	glDisableVertexAttribArray(vertexPositionLocation);
-
-	//Unbind program
-	glUseProgram(NULL);
-}
+//void ModelRenderer::renderModel2(Model2 * a)
+//{
+//	//Bind program (the shader)
+//	glUseProgram(programId);
+//
+//	glm::vec3 translation = a->position;
+//	glm::vec3 rotation = a->rotation;
+//	glm::vec3 scale = a->scale;
+//
+//	glm::mat4 modelMatrix = glm::mat4(1.0f);
+//	modelMatrix = glm::rotate(modelMatrix, rotation.x * 180.0f / 3.14159265f, glm::vec3(1.0f, 0.0f, 0.0f));
+//	modelMatrix = glm::rotate(modelMatrix, rotation.y * 180.0f / 3.14159265f, glm::vec3(0.0f, 1.0f, 0.0f));
+//	modelMatrix = glm::rotate(modelMatrix, rotation.z * 180.0f / 3.14159265f, glm::vec3(0.0f, 0.0f, 1.0f));
+//	modelMatrix = glm::translate(modelMatrix, translation);
+//	modelMatrix = glm::scale(modelMatrix, scale);
+//
+//	//camera->updateViewMatrix();
+//
+//
+//	glUniformMatrix4fv(modelMatrixLocation, 1, GL_FALSE, glm::value_ptr(modelMatrix));
+//	glUniformMatrix4fv(viewMatrixLocation, 1, GL_FALSE, glm::value_ptr(camera->getViewMatrix()));
+//	glUniformMatrix4fv(projectionMatrixLocation, 1, GL_FALSE, glm::value_ptr(camera->getprojectionMatrix()));
+//
+//	//Enable vertex position
+//	glEnableVertexAttribArray(vertexPositionLocation);
+//
+//	//Set vertex data
+//	glBindBuffer(GL_ARRAY_BUFFER, a->vbos[0]);
+//	glVertexAttribPointer(vertexPositionLocation, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), NULL);
+//	glEnableVertexAttribArray(uvLocation);
+//	glBindBuffer(GL_ARRAY_BUFFER, a->uvbos[0]);
+//	glVertexAttribPointer(uvLocation, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(GLfloat), NULL);
+//	//Set the texture
+//	glActiveTexture(GL_TEXTURE0);
+//	glUniform1i(textureSamplerLocation, 0);
+//	glBindTexture(GL_TEXTURE_2D, a->texture->textureId);
+//
+//	//Set index data and render
+//	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, a->ibos[0]);
+//
+//	glDrawElements(GL_TRIANGLES, a->indexCounts[0], GL_UNSIGNED_INT, NULL);
+//
+//	//Disable vertex position
+//	glDisableVertexAttribArray(vertexPositionLocation);
+//
+//	//Unbind program
+//	glUseProgram(NULL);
+//}
 
 void ModelRenderer::renderTerrain(Terrain * t)
 {
