@@ -5,18 +5,21 @@
 GameLoop::GameLoop()
 {
 	camera = new FPSCamera(this->window);
-	//triangleRenderer = new TriangleRenderer(camera);
 	modelRenderer = new ModelRenderer(camera);
-	//model = new Model("monkey.obj");
+	//Call in models
 	model = new Model("cube.obj");
 	model2 = new Model("cube.obj");
-	//model2 = new Model2 ("cube.obj");
+	Tank = new Model("TANK.obj");
+	Tracks = new Model("TrainTracks/TrainTracks_3m.obj");
+	//Call in textures
+	TracksT = new Texture("TrainTracks/TrainTracks_3m/1.png");
 	brick = new Texture("brick.png");
-	//ground = new Texture("ground.png");
 	terrainTexture = new Texture("terrain-texture.png");
+	sky1 = new Texture("skydome.jpg");
+	//Terrain/ sky
 	terrain = new Terrain("terrain-heightmap.png", terrainTexture);
 
-	sky1 = new Texture("skydome.jpg");
+	
 	skydome = new Skydome(sky1);
 
 	billboard = new Billboard(brick);
@@ -27,7 +30,9 @@ GameLoop::~GameLoop()
 	//delete triangleRenderer;
 	delete camera;
 	delete model;
-	//delete model2;
+	delete model2;
+	delete Tank;
+	delete Tracks;
 	delete modelRenderer;
 	delete terrainTexture;
 	delete terrain;
@@ -78,19 +83,30 @@ void GameLoop::init()
 	modelRenderer->init();
 	model->init();
 	model2->init();
-	//model2->init();
+	Tracks->init();
+	Tank->init();
+
 	//Initalise the texure
 	brick->init();
-	//ground->init();
 	//set the texture to relevant model
 	model->setTexture(brick);
 	model2->setTexture(brick);
+	Tracks->setTexture(TracksT);
+	Tank->setTexture(TracksT);
+
+	//Where to set positions
 	model2->setPosition(10, 1, 10);
-	//model2->setTexture(ground);
+	Tracks->setPosition(20, 1, 20);
+	Tank->setPosition(40, 2, 10);
+
+	//Initalise the Textures
+	TankT->init();
+	TracksT->init();
 	terrainTexture->init();
 	terrain->init();
 	sky1->init();
 	skydome->init();
+	//Billboard
 	billboard->init();
 }
 
@@ -121,7 +137,8 @@ void GameLoop::draw()
 	modelRenderer->renderSkydome(skydome);
 	modelRenderer->renderModel(model);
 	modelRenderer->renderModel(model2);
-	//modelRenderer->renderModel2(model2);
+	modelRenderer->renderModel(Tracks);
+	modelRenderer->renderModel(Tank);
 	modelRenderer->renderTerrain(terrain);
 	modelRenderer->renderBillboard(billboard);
 	//triangleRenderer->draw();

@@ -22,9 +22,6 @@ public:
 	void init();
 	void renderModel(Model * m);
 	//Stuff for new models just copy in cpp renderer for each model and add their indivdual OBJ files
-	void renderBuilding1(Model * m);
-	void renderBuilding2(Model * m);
-	void renderTrainTracks(Model * m);
 	//void renderModel2(Model2 * m);
 	void renderTerrain(Terrain * t);
 	void renderSkydome(Skydome * s);

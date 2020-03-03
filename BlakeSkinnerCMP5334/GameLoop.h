@@ -24,6 +24,8 @@ public:
 	void clean();
 	Texture * brick;
 	Texture * ground;
+	Texture * TankT;
+	Texture * TracksT;
 private:
 	SDL_Window * window;
 	SDL_GLContext glContext;
@@ -31,6 +33,8 @@ private:
 	//Camera * camera;
 	Model* model;
 	Model * model2;
+	Model * Tank;
+	Model * Tracks;
 	//Model2 * model2;
 	FPSCamera * camera;
 	ModelRenderer* modelRenderer;
