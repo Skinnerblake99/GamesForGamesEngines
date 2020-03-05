@@ -7,7 +7,7 @@
 
 class Billboard {
 	friend class ModelRenderer;
-public:
+
 	Billboard(Texture * texture) {
 		this->texture = texture;
 		this->scale = glm::vec3(20.0f, 20.0f, 1.0f);
@@ -17,9 +17,6 @@ public:
 	virtual ~Billboard() {
 
 	}
-
-
-
 
 	void init() {
 		//Create VBO
@@ -38,7 +35,7 @@ public:
 	}
 
 	
-
+public:
 
 private:
 

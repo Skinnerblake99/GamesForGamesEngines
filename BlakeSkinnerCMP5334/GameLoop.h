@@ -32,10 +32,14 @@ private:
 	TriangleRenderer * triangleRenderer;
 	//Camera * camera;
 	Model* model;
+<<<<<<< HEAD
 	Model * model2;
 	Model * Tank;
 	Model * Tracks;
 	//Model2 * model2;
+=======
+	Model2 * model2;
+>>>>>>> parent of 0abcc9b... Added ability
 	FPSCamera * camera;
 	ModelRenderer* modelRenderer;
 

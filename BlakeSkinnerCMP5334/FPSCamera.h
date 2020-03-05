@@ -80,10 +80,9 @@ public:
 		oldMouseX = 320;
 		oldMouseY = 240;
 	}
-	float yaw = 0.0f, pitch = 0.0f;
 private:
 	bool keyStates[2];
-	
+	float yaw = 0.0f, pitch = 0.0f;
 	int oldMouseX, oldMouseY;
 	SDL_Window * window;
 };

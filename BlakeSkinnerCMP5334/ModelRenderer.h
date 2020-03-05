@@ -21,11 +21,14 @@ public:
 
 	void init();
 	void renderModel(Model * m);
+<<<<<<< HEAD
 	//Stuff for new models just copy in cpp renderer for each model and add their indivdual OBJ files
 	//void renderModel2(Model2 * m);
+=======
+	void renderModel2(Model2 * m);
+>>>>>>> parent of 0abcc9b... Added ability
 	void renderTerrain(Terrain * t);
 	void renderSkydome(Skydome * s);
-	void renderBillboard(Billboard * b);
 private:
 
 	GLuint programId = 0;

@@ -8,12 +8,18 @@ GameLoop::GameLoop()
 	modelRenderer = new ModelRenderer(camera);
 	//Call in models
 	model = new Model("cube.obj");
+<<<<<<< HEAD
 	model2 = new Model("cube.obj");
 	Tank = new Model("TANK.obj");
 	Tracks = new Model("TrainTracks/TrainTracks_3m.obj");
 	//Call in textures
 	TracksT = new Texture("TrainTracks/TrainTracks_3m/1.png");
 	brick = new Texture("brick.png");
+=======
+	model2 = new Model2 ("cube.obj");
+	brick = new Texture("brick.png");
+	ground = new Texture("ground.png");
+>>>>>>> parent of 0abcc9b... Added ability
 	terrainTexture = new Texture("terrain-texture.png");
 	sky1 = new Texture("skydome.jpg");
 	//Terrain/ sky
@@ -31,8 +37,11 @@ GameLoop::~GameLoop()
 	delete camera;
 	delete model;
 	delete model2;
+<<<<<<< HEAD
 	delete Tank;
 	delete Tracks;
+=======
+>>>>>>> parent of 0abcc9b... Added ability
 	delete modelRenderer;
 	delete terrainTexture;
 	delete terrain;
@@ -83,6 +92,7 @@ void GameLoop::init()
 	modelRenderer->init();
 	model->init();
 	model2->init();
+<<<<<<< HEAD
 	Tracks->init();
 	Tank->init();
 
@@ -102,6 +112,14 @@ void GameLoop::init()
 	//Initalise the Textures
 	TankT->init();
 	TracksT->init();
+=======
+	//Initalise the texure
+	brick->init();
+	ground->init();
+	//set the texture to relevant model
+	model->setTexture(brick);
+	model2->setTexture(ground);
+>>>>>>> parent of 0abcc9b... Added ability
 	terrainTexture->init();
 	terrain->init();
 	sky1->init();
@@ -134,16 +152,22 @@ void GameLoop::draw()
 	glEnable(GL_CULL_FACE);
 	glEnable(GL_DEPTH_TEST);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	modelRenderer->renderSkydome(skydome);
 	modelRenderer->renderModel(model);
+<<<<<<< HEAD
 	modelRenderer->renderModel(model2);
 	modelRenderer->renderModel(Tracks);
 	modelRenderer->renderModel(Tank);
+=======
+	modelRenderer->renderModel2(model2);
+>>>>>>> parent of 0abcc9b... Added ability
 	modelRenderer->renderTerrain(terrain);
+	modelRenderer->renderSkydome(skydome);
 	modelRenderer->renderBillboard(billboard);
 	//triangleRenderer->draw();
 	//present the screen
 	SDL_GL_SwapWindow(window);
+	
+	
 	
 }
 
